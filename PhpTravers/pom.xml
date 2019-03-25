@@ -10,7 +10,16 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  
    <build> 
+    <resources>
+      <resource>
+        <directory>C:\Work\eclipse-workspace\PhpTravers\src\test\tests</directory>
+      </resource>
+    </resources>
+   
+  
     <plugins>
   <plugin>
     <groupId>org.apache.maven.plugins</groupId>
