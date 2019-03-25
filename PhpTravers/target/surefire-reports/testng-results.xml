@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-03-07T00:59:27Z" name="Suite" finished-at="2019-03-07T01:00:10Z" duration-ms="43189">
+    <groups>
+    </groups>
+    <test started-at="2019-03-07T00:59:27Z" name="Test" finished-at="2019-03-07T01:00:10Z" duration-ms="43189">
+      <class name="tests.MainFlow">
+        <test-method is-config="true" signature="InitilizeDriver()[pri:0, instance:tests.MainFlow@60975100]" started-at="2019-03-07T00:59:27Z" name="InitilizeDriver" finished-at="2019-03-07T00:59:39Z" duration-ms="12150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitilizeDriver -->
+        <test-method signature="locateLRO()[pri:1, instance:tests.MainFlow@60975100]" started-at="2019-03-07T00:59:39Z" name="locateLRO" finished-at="2019-03-07T00:59:43Z" duration-ms="3560" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- locateLRO -->
+        <test-method signature="propertyByPINSearch()[pri:2, instance:tests.MainFlow@60975100]" started-at="2019-03-07T00:59:43Z" name="propertyByPINSearch" finished-at="2019-03-07T00:59:47Z" duration-ms="4335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- propertyByPINSearch -->
+        <test-method signature="propertyOrderStep1()[pri:3, instance:tests.MainFlow@60975100]" started-at="2019-03-07T00:59:47Z" name="propertyOrderStep1" finished-at="2019-03-07T00:59:58Z" duration-ms="10402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- propertyOrderStep1 -->
+        <test-method signature="propertyOrderStep2()[pri:4, instance:tests.MainFlow@60975100]" started-at="2019-03-07T00:59:58Z" name="propertyOrderStep2" finished-at="2019-03-07T01:00:00Z" duration-ms="2471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- propertyOrderStep2 -->
+        <test-method signature="propertyOrderAddToCart()[pri:5, instance:tests.MainFlow@60975100]" started-at="2019-03-07T01:00:00Z" name="propertyOrderAddToCart" finished-at="2019-03-07T01:00:07Z" duration-ms="6625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- propertyOrderAddToCart -->
+        <test-method signature="YourShoppingCart()[pri:6, instance:tests.MainFlow@60975100]" started-at="2019-03-07T01:00:07Z" name="YourShoppingCart" finished-at="2019-03-07T01:00:08Z" duration-ms="1248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- YourShoppingCart -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.MainFlow@60975100]" started-at="2019-03-07T01:00:08Z" name="closeBrowser" finished-at="2019-03-07T01:00:10Z" duration-ms="2345" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.MainFlow -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
