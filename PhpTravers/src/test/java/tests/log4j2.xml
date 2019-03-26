@@ -9,8 +9,10 @@
      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
       <SizeBasedTriggeringPolicy size="500" />
           </RollingFile>
+    
+    
     <Console name="Console" target="SYSTEM_OUT">
-      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+      <PatternLayout pattern="%highlight{%d{dd:MMM-HH:mm:ss} [%t] %-5level- %msg%n}{FATAL=red bright, ERROR=red bright, WARN=yellow bold, INFO=green, DEBUG=green, TRACE=blue}" disableAnsi="false"/>
     </Console>
   </Appenders>
   <Loggers>

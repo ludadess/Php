@@ -12,18 +12,19 @@ public class Listener implements ITestListener{
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		System.out.println("#############Test "+result.getName()+" started");
+		System.out.println("################################Test "+result.getName()+" started");
 	
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("#############Test "+result.getName()+" completed");
+		System.out.println("################################Test "+result.getName()+" completed");
 		
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
+		System.out.println("################################Test "+result.getName()+" failed");
 		try {
 			Utilities.getScreenShot(result.getName());
 		} catch (IOException e) {

@@ -9,15 +9,40 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">24,842</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num attn">4</td><td class="num attn">1</td><td class="num">25,762</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">tests.MainFlow</td><td><a href="#m0">YourShoppingCart</a></td><td rowspan="1">1553524966472</td><td rowspan="1">690</td></tr><tr class="passedeven"><td><a href="#m1">locateLRO</a></td><td rowspan="1">1553524953841</td><td rowspan="1">1894</td></tr><tr class="passedeven"><td><a href="#m2">propertyByPINSearch</a></td><td rowspan="1">1553524955739</td><td rowspan="1">2422</td></tr><tr class="passedeven"><td><a href="#m3">propertyOrderAddToCart</a></td><td rowspan="1">1553524964041</td><td rowspan="1">2430</td></tr><tr class="passedeven"><td><a href="#m4">propertyOrderStep1</a></td><td rowspan="1">1553524958162</td><td rowspan="1">3971</td></tr><tr class="passedeven"><td><a href="#m5">propertyOrderStep2</a></td><td rowspan="1">1553524962135</td><td rowspan="1">1904</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.MainFlow</td><td><a href="#m0">propertyByPINSearch</a></td><td rowspan="1">1553618217973</td><td rowspan="1">11764</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="4">tests.MainFlow</td><td><a href="#m1">YourShoppingCart</a></td><td rowspan="1">1553618230396</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m2">propertyOrderAddToCart</a></td><td rowspan="1">1553618230395</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">propertyOrderStep1</a></td><td rowspan="1">1553618230392</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">propertyOrderStep2</a></td><td rowspan="1">1553618230393</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.MainFlow</td><td><a href="#m5">locateLRO</a></td><td rowspan="1">1553618216091</td><td rowspan="1">1878</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">tests.MainFlow#YourShoppingCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.MainFlow#locateLRO</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.MainFlow#propertyByPINSearch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.MainFlow#propertyOrderAddToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.MainFlow#propertyOrderStep1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.MainFlow#propertyOrderStep2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">tests.MainFlow#propertyByPINSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //h2[contains(text(),&apos;Showing 1 to 1 of 1 search results for PIN&apos;)] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
+	at pages.PropertyPINPage.getSearchResultsHeader(PropertyPINPage.java:55)
+	at reusableflows.Property.searchPropertyByPIN(Property.java:42)
+	at tests.MainFlow.propertyByPINSearch(MainFlow.java:48)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //h2[contains(text(),&apos;Showing 1 to 1 of 1 search results for PIN&apos;)]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-SLUED5U&apos;, ip: &apos;192.168.1.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:657)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:654)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
+	... 28 more
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.MainFlow#YourShoppingCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method MainFlow.YourShoppingCart()[pri:6, instance:tests.MainFlow@1aafa419] depends on not successfully finished methods
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.MainFlow#propertyOrderAddToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method MainFlow.propertyOrderAddToCart()[pri:5, instance:tests.MainFlow@1aafa419] depends on not successfully finished methods
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.MainFlow#propertyOrderStep1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method MainFlow.propertyOrderStep1()[pri:3, instance:tests.MainFlow@1aafa419] depends on not successfully finished methods
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.MainFlow#propertyOrderStep2</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method MainFlow.propertyOrderStep2()[pri:4, instance:tests.MainFlow@1aafa419] depends on not successfully finished methods
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.MainFlow#locateLRO</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

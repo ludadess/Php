@@ -15,8 +15,8 @@
    <build> 
     <resources>
       <resource>
-        <directory>C:\Work\eclipse-workspace\PhpTravers\src\test\tests</directory>
-      </resource>
+        <directory>src\test\java\tests</directory>
+       </resource>
     </resources>
    
   
@@ -107,7 +107,11 @@
     <artifactId>eyes-common-java3</artifactId>
     <version>3.141.1</version>
 </dependency>
-
+<dependency>
+  <groupId>com.jcabi</groupId>
+  <artifactId>jcabi-log</artifactId>
+  <version>0.17.3</version>
+</dependency>
 </dependencies>  
   
 </project>

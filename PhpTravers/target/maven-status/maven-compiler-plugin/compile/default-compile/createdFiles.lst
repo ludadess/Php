@@ -1,8 +1,8 @@
 pages\YourShoppingCartPage.class
-pages\PropertyOrder1Page.class
-utils\Utilities.class
 pages\HomePage.class
-utils\MyDriverClass.class
 pages\AddToCartPopUpPage.class
 pages\PropertyOrder2Page.class
+pages\PropertyOrder1Page.class
+utils\Utilities.class
+utils\MyDriverClass.class
 pages\PropertyPINPage.class
