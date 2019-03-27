@@ -35,14 +35,18 @@ public class MainFlow {
 	@Test (priority =1)
 	public void locateLRO(){
 //************ Home page ******************************
+		ExtentTestManager.getTest().setDescription("Locate LRO #################");
 		HomePage homePg = new HomePage();
 		homePg.selectLRO("80");
-		log.error("=========== LRO 80 is selected================== ");
+		//log.error("=========== LRO 80 is selected================== ");
+		Loggers.info("=========== LRO 80 is selected================== ");
 		homePg.clickPropertyBtn();
-		log.warn("********** Search Property button is clicked********* ");
+		Loggers.info("********** Search Property button is clicked********* ");
 	}
+	
 	@Test (priority =2, dependsOnMethods="locateLRO")
 	public void propertyByPINSearch(){
+		 ExtentTestManager.getTest().setDescription("Search by PIN #################");
 		//************ Search Property by PIN page ******		
 		PropertyPINPage propertyPinPg = new PropertyPINPage();
 		Property.searchPropertyByPIN("PIN");
@@ -51,6 +55,7 @@ public class MainFlow {
 	
 	@Test (priority =3, dependsOnMethods="propertyByPINSearch")
 	public void propertyOrderStep1(){
+		 ExtentTestManager.getTest().setDescription("propertyOrderStep1");
 //************ Property Order Step1  ***********************	
 		PropertyOrder1Page propertyOrder1Pg = new PropertyOrder1Page();
 		propertyOrder1Pg.clickCustDateRangeBtn();
@@ -62,16 +67,18 @@ public class MainFlow {
 	@Test (priority =4, dependsOnMethods="propertyOrderStep1")
 	public void propertyOrderStep2(){
 //************ Property Order Step2  ***********************		
+		 ExtentTestManager.getTest().setDescription("propertyOrderStep2");
 		PropertyOrder2Page propertyOrder2Pg = new PropertyOrder2Page();
 		propertyOrder2Pg.clickAddCertCopy();
-		log.fatal("**********Add Certified Copy link is selected********* ");
+		Loggers.info("**********Add Certified Copy link is selected********* ");
 		propertyOrder2Pg.clickAddToCartBtn();
 		log.info("**********Add To Cart button is clicked********* ");
 	}
 	
 	@Test (priority =5, dependsOnMethods="propertyOrderStep2")
 	public void propertyOrderAddToCart(){
-//************ Add To Cart pop up  ***********************			
+//************ Add To Cart pop up  ***********************	
+		 ExtentTestManager.getTest().setDescription("propertyOrderAddToCart");
 		AddToCartPopUpPage addToCartPg = new AddToCartPopUpPage();
 		addToCartPg.clickCheckoutBtn();
 		log.info("**********Checkout button is clicked********* ");
@@ -79,7 +86,8 @@ public class MainFlow {
 	}
 	@Test (priority =6, dependsOnMethods="propertyOrderAddToCart")
 	public void YourShoppingCart(){
-//************ Your Shopping Cart page  ***********************			
+//************ Your Shopping Cart page  ***********************	
+		ExtentTestManager.getTest().setDescription("YourShoppingCart");
 		YourShoppingCartPage yourShoppCartPg = new YourShoppingCartPage();
 		yourShoppCartPg.clickCheckoutBtn();
 		log.info("**********Checkout button is clicked********* ");

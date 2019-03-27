@@ -1,4 +1,9 @@
 reusableflows\Property.class
 tests\MainFlow.class
+tests\Loggers.class
+tests\ExtentManager.class
 tests\ExtentReporterNG.class
+tests\Listener2.class
+tests\Retry.class
+tests\ExtentTestManager.class
 tests\Listener.class

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,50 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,  4 skipped,  1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.MainFlow" hash-for-method="propertyByPINSearch">propertyByPINSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.MainFlow" hash-for-method="YourShoppingCart">YourShoppingCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.MainFlow" hash-for-method="propertyOrderAddToCart">propertyOrderAddToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.MainFlow" hash-for-method="propertyOrderStep1">propertyOrderStep1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.MainFlow" hash-for-method="propertyOrderStep2">propertyOrderStep2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,32 +145,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.MainFlow" hash-for-method="YourShoppingCart">YourShoppingCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.MainFlow" hash-for-method="locateLRO">locateLRO</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.MainFlow" hash-for-method="propertyByPINSearch">propertyByPINSearch</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.MainFlow" hash-for-method="propertyOrderAddToCart">propertyOrderAddToCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.MainFlow" hash-for-method="propertyOrderStep1">propertyOrderStep1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.MainFlow" hash-for-method="propertyOrderStep2">propertyOrderStep2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -142,9 +160,47 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">tests.MainFlow</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="propertyByPINSearch">
+                  </a> <!-- propertyByPINSearch -->
+                  <span class="method-name">propertyByPINSearch</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //h2[contains(text(),&apos;Showing 1 to 1 of 1 search results for PIN&apos;)] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
+	at pages.PropertyPINPage.getSearchResultsHeader(PropertyPINPage.java:55)
+	at reusableflows.Property.searchPropertyByPIN(Property.java:43)
+	at tests.MainFlow.propertyByPINSearch(MainFlow.java:52)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //h2[contains(text(),&apos;Showing 1 to 1 of 1 search results for PIN&apos;)]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-SLUED5U&apos;, ip: &apos;192.168.1.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:657)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:654)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
+	... 32 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
               <span class="class-name">tests.MainFlow</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -153,20 +209,9 @@
                   <a name="YourShoppingCart">
                   </a> <!-- YourShoppingCart -->
                   <span class="method-name">YourShoppingCart</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="locateLRO">
-                  </a> <!-- locateLRO -->
-                  <span class="method-name">locateLRO</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="propertyByPINSearch">
-                  </a> <!-- propertyByPINSearch -->
-                  <span class="method-name">propertyByPINSearch</span>
+                  <div class="stack-trace">java.lang.Throwable: Method MainFlow.YourShoppingCart()[pri:6, instance:tests.MainFlow@44ebcd03] depends on not successfully finished methods
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -174,6 +219,9 @@
                   <a name="propertyOrderAddToCart">
                   </a> <!-- propertyOrderAddToCart -->
                   <span class="method-name">propertyOrderAddToCart</span>
+                  <div class="stack-trace">java.lang.Throwable: Method MainFlow.propertyOrderAddToCart()[pri:5, instance:tests.MainFlow@44ebcd03] depends on not successfully finished methods
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -181,6 +229,9 @@
                   <a name="propertyOrderStep1">
                   </a> <!-- propertyOrderStep1 -->
                   <span class="method-name">propertyOrderStep1</span>
+                  <div class="stack-trace">java.lang.Throwable: Method MainFlow.propertyOrderStep1()[pri:3, instance:tests.MainFlow@44ebcd03] depends on not successfully finished methods
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -188,6 +239,24 @@
                   <a name="propertyOrderStep2">
                   </a> <!-- propertyOrderStep2 -->
                   <span class="method-name">propertyOrderStep2</span>
+                  <div class="stack-trace">java.lang.Throwable: Method MainFlow.propertyOrderStep2()[pri:4, instance:tests.MainFlow@44ebcd03] depends on not successfully finished methods
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.MainFlow</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="locateLRO">
+                  </a> <!-- locateLRO -->
+                  <span class="method-name">locateLRO</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -204,7 +273,6 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;tests.Listener&quot;/&gt;
-    &lt;listener class-name=&quot;tests.ExtentReporterNG&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
@@ -250,34 +318,34 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'propertyOrderStep1')
+data.setCell(0, 1, 'propertyByPINSearch')
 data.setCell(0, 2, 'tests.MainFlow')
-data.setCell(0, 3, 3805);
+data.setCell(0, 3, 11714);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'propertyOrderStep2')
+data.setCell(1, 1, 'locateLRO')
 data.setCell(1, 2, 'tests.MainFlow')
-data.setCell(1, 3, 3336);
+data.setCell(1, 3, 1930);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'propertyByPINSearch')
+data.setCell(2, 1, 'propertyOrderStep2')
 data.setCell(2, 2, 'tests.MainFlow')
-data.setCell(2, 3, 3245);
+data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'locateLRO')
+data.setCell(3, 1, 'propertyOrderAddToCart')
 data.setCell(3, 2, 'tests.MainFlow')
-data.setCell(3, 3, 1856);
+data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'propertyOrderAddToCart')
+data.setCell(4, 1, 'propertyOrderStep1')
 data.setCell(4, 2, 'tests.MainFlow')
-data.setCell(4, 3, 1667);
+data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'YourShoppingCart')
 data.setCell(5, 2, 'tests.MainFlow')
-data.setCell(5, 3, 690);
+data.setCell(5, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -310,31 +378,17 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">locateLRO</span>
-                <span class="method-start">8987 ms</span>
+                <span class="method-start">9001 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">propertyByPINSearch</span>
-                <span class="method-start">10846 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">propertyOrderStep1</span>
-                <span class="method-start">14092 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">propertyOrderStep2</span>
-                <span class="method-start">17898 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">propertyOrderAddToCart</span>
-                <span class="method-start">21235 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">YourShoppingCart</span>
-                <span class="method-start">22903 ms</span>
+                <span class="method-start">10934 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">23593 ms</span>
+                <span class="method-start">23164 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

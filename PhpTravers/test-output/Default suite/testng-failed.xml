@@ -6,8 +6,12 @@
       <class name="tests.MainFlow">
         <methods>
           <include name="propertyOrderStep1"/>
+          <include name="propertyOrderStep2"/>
           <include name="propertyByPINSearch"/>
+          <include name="YourShoppingCart"/>
+          <include name="propertyOrderAddToCart"/>
           <include name="InitilizeDriver"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- tests.MainFlow -->
     </classes>

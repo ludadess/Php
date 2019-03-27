@@ -3,7 +3,7 @@
 <suite name="Suite">
 <listeners>
  <listener class-name="tests.Listener"></listener>
- <listener class-name="tests.ExtentReporterNG"></listener>
+ <!--  <listener class-name="tests.ExtentManager"></listener>-->
  </listeners>
   <test name="Test">
     <classes>

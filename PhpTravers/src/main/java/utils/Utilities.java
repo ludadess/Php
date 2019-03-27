@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -142,12 +143,18 @@ public class Utilities {
 	  	
 	}
 	
-	public static void getScreenShot(String fileName) throws IOException {
+	public static void getScreenShot(String fileName) {
 		WebDriver driver = MyDriverClass.getDriver();
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src, new File(System.getProperty("user.dir") + "\\FailedTestsScreenshoots\\"+fileName+"screen.png"));	
+		String timeStamp = new SimpleDateFormat("MM_dd-HH_mm_ss").format(Calendar.getInstance().getTime());
+		try {
+			FileUtils.copyFile(src, new File(System.getProperty("user.dir") + "\\FailedTestsScreenshoots\\"+timeStamp+"_"+fileName+".png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
 	}
-
+	
 	public static void connectToExcel (String filePath) throws IOException {
 		FileInputStream file = new FileInputStream(filePath);
 		workbook = new XSSFWorkbook(file);
@@ -226,6 +233,8 @@ public class Utilities {
 	cal.setTime(date);
 	return cal.get(Calendar.MONTH)+1;
 	}
+	
+
 	
 	public static void initilizeJSON (String fileName,String pageName,String TestSet)  {	
 		String fPath = System.getProperty("user.dir") + "\\src\\main\\resources\\"+fileName;

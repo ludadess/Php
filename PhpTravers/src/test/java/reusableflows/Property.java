@@ -14,12 +14,13 @@ import org.testng.Assert;
 
 import pages.PropertyOrder1Page;
 import pages.PropertyPINPage;
+import tests.Loggers;
 import utils.MyDriverClass;
 import utils.Utilities;
 
 
 public class Property {
-	private static Logger log = LogManager.getLogger(Property.class.getName());
+	//private static Logger log = LogManager.getLogger(Property.class.getName());
 	static WebDriver driver = MyDriverClass.getDriver();
 	static WebDriverWait wait;
 	
@@ -32,11 +33,11 @@ public class Property {
 		propertyPinPg.enterPropertyNumb(Utilities.getJSONData("Property#"));
 		propertyPinPg.enterRequestedBy(Utilities.getJSONData("RequestedBy"));
 		propertyPinPg.clickSearch();
-		log.info("The following search data was entered: ");
-		log.info("Block#: "+Utilities.getJSONData("Block#"));
-		log.info("Property#: "+Utilities.getJSONData("Property#"));
-		log.info("RequestedBy: "+Utilities.getJSONData("RequestedBy"));
-		log.info("**********Property Search by PIN results page********* ");
+		Loggers.info("The following search data was entered: ");
+		Loggers.info("Block#: "+Utilities.getJSONData("Block#"));
+		Loggers.info("Property#: "+Utilities.getJSONData("Property#"));
+		Loggers.info("RequestedBy: "+Utilities.getJSONData("RequestedBy"));
+		Loggers.info("**********Property Search by PIN results page********* ");
 		// verify correct PIN is displayed in search results header
 		String expPIN = Utilities.getJSONData("Block#")+"-"+Utilities.getJSONData("Property#");
 		wait.until(ExpectedConditions.elementToBeClickable(propertyPinPg.getSearchResultsHeader()));
@@ -53,7 +54,7 @@ public class Property {
 		wait.until(ExpectedConditions.elementToBeClickable(propertyPinPg.getSearchResults()));
 		String actPIN = propertyPinPg.getSearchResults().getText();
 		Assert.assertEquals(actPIN, expPIN);
-		log.info("Search results: "+propertyPinPg.getSearchResults().getText()+" is displayed");
+		Loggers.info("Search results: "+propertyPinPg.getSearchResults().getText()+" is displayed");
 	}
 	
 	
@@ -81,7 +82,7 @@ public class Property {
 	    SimpleDateFormat sdf2 = new SimpleDateFormat("MMMM dd yyyy");
 	    String dayLocator = "td[aria-label='"+sdf2.format(c.getTime())+"']";
 	    driver.findElement(By.cssSelector(dayLocator)).click();
-	    log.info("Date From ia selected as :"+ sdf2.format(c.getTime()) );
+	    Loggers.info("Date From ia selected as :"+ sdf2.format(c.getTime()) );
 			
 	}
 }
