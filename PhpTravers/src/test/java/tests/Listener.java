@@ -25,13 +25,12 @@ import utils.MyDriverClass;
 		private static String getTestMethodName(ITestResult iTestResult) {
 	        return iTestResult.getMethod().getConstructorOrMethod().getName();
 	    }
-	    
-	  
+		  
 	    //Before starting all tests, below method runs.
 	    @Override
 	    public void onStart(ITestContext iTestContext) {
 	        System.out.println("I am in onStart method " + iTestContext.getName());
-	        iTestContext.setAttribute("WebDriver", driver);
+	        //iTestContext.setAttribute("WebDriver", driver);
 	      }
 	 
 	    //After ending all tests, below method runs.
@@ -46,22 +45,19 @@ import utils.MyDriverClass;
 	    @Override
 	    public void onTestStart(ITestResult iTestResult) {
 	    	System.out.println("################################ Test "+iTestResult.getName()+" started");
-	        //System.out.println("I am in onTestStart method " + iTestResult.getName()  + " start");
-	        //Start operation for extentreports.
+	       //Start operation for extentreports.
 	        ExtentTestManager.startTest(iTestResult.getName(),"");
 	    }
 	 
 	    @Override
 	    public void onTestSuccess(ITestResult iTestResult) {
-	        //System.out.println("I am in onTestSuccess method " +  getTestMethodName(iTestResult) + " succeed");
-	        System.out.println("################################ Test "+iTestResult.getName()+" completed");
+	         System.out.println("################################ Test "+iTestResult.getName()+" completed");
 	        //Extentreports log operation for passed tests.
 	        ExtentTestManager.getTest().log(LogStatus.PASS, iTestResult.getName(),"Test passed");
 	    }
 	 
 	    @Override
 	    public void onTestFailure(ITestResult iTestResult) {
-	        //System.out.println("I am in onTestFailure method " +  getTestMethodName(iTestResult) + " failed");
 	        System.out.println("################################ Test "+iTestResult.getName()+" failed");
 	 
 	        //Object testClass = iTestResult.getInstance();
@@ -72,7 +68,6 @@ import utils.MyDriverClass;
 			try {
 				FileUtils.copyFile(src, new File(pathImage));
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}	
 	       

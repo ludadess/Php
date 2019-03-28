@@ -1,6 +1,13 @@
 package tests;
 
 import com.relevantcodes.extentreports.LogStatus;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -30,10 +37,21 @@ public class Retry implements IRetryAnalyzer {
     }
  
     public void extendReportsFailOperations (ITestResult iTestResult) {
-        Object testClass = iTestResult.getInstance();
+        //Object testClass = iTestResult.getInstance();
         WebDriver driver = MyDriverClass.getDriver();
-        String base64Screenshot = "data:image/png;base64,"+((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
-        ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Failed",
-                ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
+       	File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		String timeStamp = new SimpleDateFormat("MM_dd-HH_mm_ss").format(Calendar.getInstance().getTime());
+		String pathImage = System.getProperty("user.dir") + "\\FailedTestsScreenshoots\\"+timeStamp+"_"+iTestResult.getName()+".png";
+		try {
+			FileUtils.copyFile(src, new File(pathImage));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+       
+        //Extentreports log and screenshot operations for failed tests.
+		ExtentTestManager.getTest().log(LogStatus.FAIL, ExtentTestManager.getTest().addScreenCapture(pathImage),iTestResult.getThrowable().getMessage());
+		ExtentTestManager.getTest().log(LogStatus.FAIL, iTestResult.getName(), "Test Failed");
+        
     }
 }

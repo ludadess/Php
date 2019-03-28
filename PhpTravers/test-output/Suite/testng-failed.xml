@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
     <listener class-name="tests.Listener"/>
+    <listener class-name="tests.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
