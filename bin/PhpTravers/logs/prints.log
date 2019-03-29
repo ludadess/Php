@@ -1,0 +1,6 @@
+19:09:54.891 [main] INFO  tests.Login - AUTHENTICATION page is displayed
+19:09:56.093 [main] INFO  tests.Login - Login is successfull with emal: Test831987@gmai.com password: Selenium
+19:14:52.116 [main] INFO  tests.Login - AUTHENTICATION page is displayed
+19:14:53.273 [main] INFO  tests.Login - Login is successfull with emal: Test831987@gmai.com password: Selenium
+19:15:41.313 [main] INFO  tests.Login - AUTHENTICATION page is displayed
+19:15:42.527 [main] INFO  tests.Login - Login is successfull with emal: Test831987@gmai.com password: Selenium

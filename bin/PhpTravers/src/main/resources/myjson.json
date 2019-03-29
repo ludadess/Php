@@ -1,0 +1,14 @@
+{"LoginInfo":{
+  "TestSet1": { "email": "Test831987@gmai.com", "password": "Selenium"},
+  "TestSet2": { "email": "Test831987@gmai.com", "password": "Selenium1"}},
+"DocumentSearch":{
+"Plan":{"Reg#":"66M1161","RequestedBy":"Test"},
+"Instrument":{"Reg#":"EB506754","RequestedBy":"Test"}},
+"PropertySearch":{
+"PIN":{"Block#":"10428","Property#":"0795","RequestedBy":"Test"},
+"Address":{"Street#":"1","StreetName":"King","RequestedBy":"Test"},
+"Instrument":{"Instrument#":"EB216337","RequestedBy":"Test"}},
+"HistBookSearch":{
+"TestSet1":{"BookCateg":"General Register Index"},
+"TestSet2":{"BookCateg":"Power of Attorney Index"}}
+}
